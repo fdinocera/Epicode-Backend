@@ -11,8 +11,8 @@ public class ClasseWhile {
         String testo = scanner.nextLine();
 
         while (!testo.equals(":q")) {
-            String txt="";
-            int index=0;
+            String txt = "";
+            int index = 0;
 
             while (index < testo.length()) {
                 char result = testo.charAt(index);
@@ -20,8 +20,6 @@ public class ClasseWhile {
                 index++;
             }
             System.out.println(txt);
-            txt="";
-            index=0;
             System.out.println("inserisci stringa");
             testo = scanner.nextLine();
         };
