@@ -8,7 +8,8 @@ public class ClasseSwitch {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("inserisci numero intero");
+        System.out.println("inseri" +
+                "sci numero intero");
         int numero = scanner.nextInt();
         switch (numero){
             case 0:

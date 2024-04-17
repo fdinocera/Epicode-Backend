@@ -16,7 +16,8 @@ public class ClasseWhile {
 
             while (index < testo.length()) {
                 char result = testo.charAt(index);
-                txt += String.valueOf(result) + ',';
+                //txt += String.valueOf(result) + ',';
+                txt += result + ',';
                 index++;
             }
             System.out.println(txt);
