@@ -3,12 +3,36 @@ package OperatoreTelefoniaCellulare;
 import java.util.Scanner;
 
 public class SIM {
-    private String numeroTelefono;
+    private int numeroTelefono;
     private double creditoDisponibile;
-    private String[] ultime5Chiamate = new String[5];
+    private Chiamata[] ultime5Chiamate;
 
-    SIM(String numeroTelefono) {
+    public SIM(int numeroTelefono) {
         this.numeroTelefono = numeroTelefono;
+    }
+
+    public int getNumeroTelefono() {
+        return numeroTelefono;
+    }
+
+    public void setNumeroTelefono(int numeroTelefono) {
+        this.numeroTelefono = numeroTelefono;
+    }
+
+    public double getCreditoDisponibile() {
+        return creditoDisponibile;
+    }
+
+    public void setCreditoDisponibile(double creditoDisponibile) {
+        this.creditoDisponibile = creditoDisponibile;
+    }
+
+    public Chiamata[] getUltime5Chiamate() {
+        return ultime5Chiamate;
+    }
+
+    public void setUltime5Chiamate(Chiamata[] ultime5Chiamate) {
+        this.ultime5Chiamate = ultime5Chiamate;
     }
 
     public void stampaDati() {
@@ -16,7 +40,8 @@ public class SIM {
         System.out.println("Credito disponibile: " + creditoDisponibile);
 
         for (int i = 0; i < ultime5Chiamate.length; i++) {
-            System.out.println("chiamata: " + ultime5Chiamate[i]);
+            System.out.println("il numero chiamato è " + ultime5Chiamate[i].getNumero() +
+                    ", i minuti di conversazione sono " + ultime5Chiamate[i].getMinutiConversazione());
         }
     }
 }
