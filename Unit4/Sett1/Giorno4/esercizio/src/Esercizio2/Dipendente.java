@@ -1,11 +1,10 @@
-package Esercizio1;
+package Esercizio2;
 
-public class Dipendente {
+abstract public class Dipendente {
 
     private String matricola;
     private Double stipendio;
     private Dipartimento dipartimento;
-
 
     public Dipendente(String matricola, Double stipendio, Dipartimento dipartimento) {
         this.matricola = matricola;
@@ -28,4 +27,5 @@ public class Dipendente {
     public void setDipartimento(Dipartimento dipartimento) {
         this.dipartimento = dipartimento;
     }
+
 }

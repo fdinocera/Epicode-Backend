@@ -1,4 +1,4 @@
-package Esercizio2;
+package Esercizio3;
 
 public class DipendenteFullTime extends Dipendente {
 
@@ -8,5 +8,10 @@ public class DipendenteFullTime extends Dipendente {
 
     double calculateSalary(){
         return getStipendio();
+    }
+
+    @Override
+    public void checkIn() {
+        System.out.println(getMatricola()+ " ha iniziato a lavorare");
     }
 }
