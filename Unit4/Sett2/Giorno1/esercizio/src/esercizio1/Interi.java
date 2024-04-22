@@ -8,14 +8,15 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Interi {
-    Logger logger = LoggerFactory.getLogger("logger1");
+    //TRACE<DEBUG<INFO<WARN<ERROR
+    static Logger logger = LoggerFactory.getLogger("logger1");
 
     public static void main(String[] args) {
-        Random numrtoRandom = new Random();
+        Random numeroRandom = new Random();
         int[] interi = new int[5];
 
         for (int i = 0; i < interi.length; i++) {
-            interi[i] = numrtoRandom.nextInt(10) + 1;
+            interi[i] = numeroRandom.nextInt(10) + 1;
             System.out.println(interi[i]);
         }
 
@@ -39,8 +40,10 @@ public class Interi {
                 }
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("La posizione deve essere compresa tra 1 e 5");
+                logger.info("La posizione deve essere compresa tra 1 e 5");
             } catch (Exception e) {
                 System.out.println("Errore generico");
+                logger.info("Errore generico");
                 scanner.nextLine();
             }
         }
