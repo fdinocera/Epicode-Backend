@@ -33,7 +33,5 @@ public class Parole {
 
         //stampa parole distinte
         System.out.println("Elenco parole distinte: " + paroleDistinte);
-
-
     }
 }
