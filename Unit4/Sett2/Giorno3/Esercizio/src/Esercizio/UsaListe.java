@@ -1,5 +1,6 @@
 package Esercizio;
 
+
 import java.time.LocalDate;
 import java.time.chrono.ChronoLocalDate;
 import java.util.ArrayList;
@@ -8,123 +9,85 @@ import java.util.stream.Collectors;
 
 public class UsaListe {
 
-
     public static void main(String[] args) {
 
         //lista clienti
-        List<Customer> listaClienti = new ArrayList<>();
-        listaClienti.add(new Customer(123L, "Rossi Mario", 4));
-        listaClienti.add(new Customer(153L, "Bianchi Aldo", 3));
-        listaClienti.add(new Customer(253L, "Verdi Maria", 3));
+        Customer cliente1 = new Customer(123L, "Rossi Mario", 2);
+        Customer cliente2 = new Customer(153L, "Bianchi Aldo", 2);
+        Customer cliente3 = new Customer(253L, "Verdi Maria", 2);
+        List<Customer> listaClienti = List.of(cliente1, cliente2, cliente3);
 
-        //prodotti
-        List<Product> listaProdotti = new ArrayList<>();
+        //lista prodotti
         Product p1 = new Product(1234L, "Java Avanzato", "Books", 25.44);
-        Product p2 = new Product(1347L, "Javascript, Css, HTML", "Books", 135.4);
-        Product p3 =new Product(234L, "Tutina con animaletti", "Baby", 15.23);
-        Product p4 =new Product(147L, "Lego. I pompieri", "Baby", 35.14);
-        Product p5 =new Product(234L, "Skateboard", "Boys", 55.80);
-        Product p6 =new Product(147L, "Cellulare Samsung", "Boys", 335.98);
-
-        listaProdotti.add(p1);
-        listaProdotti.add(p2);
-        listaProdotti.add(p3);
-        listaProdotti.add(p4);
-        listaProdotti.add(p5);
-        listaProdotti.add(p6);
-
-
-
-//        listaProdotti.add(new Product(1234L, "Java Avanzato", "Books", 25.44));
-//        listaProdotti.add(new Product(1347L, "Javascript, Css, HTML", "Books", 135.4));
-//        listaProdotti.add(new Product(234L, "Tutina con animaletti", "Baby", 15.23));
-//        listaProdotti.add(new Product(147L, "Lego. I pompieri", "Baby", 35.14));
-//        listaProdotti.add(new Product(234L, "Skateboard", "Boys", 55.80));
-//        listaProdotti.add(new Product(147L, "Cellulare Samsung", "Boys", 335.98));
-
-
-        //liste prodotti
-        List<Product> lista1 = new ArrayList<>();
-        lista1.add(p1);
-        lista1.add(p2);
-
-        List<Product> lista2 = new ArrayList<>();
-        lista1.add(p3);
-        lista1.add(p4);
-
-        List<Product> lista3 = new ArrayList<>();
-        lista1.add(p5);
-        lista1.add(p6);
-
-
-
+        Product p2 = new Product(2347L, "Javascript, Css, HTML", "Books", 135.4);
+        Product p3 = new Product(334L, "Tutina con animaletti", "Baby", 15.23);
+        Product p4 = new Product(447L, "Lego. I pompieri", "Baby", 35.14);
+        Product p5 = new Product(534L, "Skateboard", "Boys", 55.80);
+        Product p6 = new Product(647L, "Cellulare Samsung", "Boys", 335.98);
+        List<Product> listaProdotti = List.of(p1, p2, p3, p4, p5, p6);
 
         //lista ordini
-        List<Order> listaOrdini = new ArrayList<>();
-        listaOrdini.add(new Order(124L, "consegnato", LocalDate.of(2020, 05, 01),
+        Order ordine1 = new Order(124L, "consegnato", LocalDate.of(2020, 05, 01),
                 LocalDate.of(2020, 05, 05),
-                lista1 ,
-                listaClienti.get(0)));
+                List.of(p1, p2),
+                cliente1);
 
-        listaOrdini.add(new Order(128L, "spedito", LocalDate.of(2020, 06, 01),
-                LocalDate.of(2020, 06, 05),
-                lista2,
-                listaClienti.get(1)));
+        Order ordine2 = new Order(128L, "spedito", LocalDate.of(2021, 02, 01),
+                LocalDate.of(2021, 02, 05),
+                List.of(p3, p4),
+                cliente2);
 
-
-
+        Order ordine3 = new Order(136L, "spedito", LocalDate.of(2021, 04, 01),
+                LocalDate.of(2021, 04, 05),
+                List.of(p5, p6),
+                cliente3);
+        List<Order> listaOrdini = List.of(ordine1, ordine2, ordine3);
 
 
         //esercizio 1---------------------------------------------------------------------------------------------------
-        List<Product> listaEsercizio1 = getProdottiBooks(listaProdotti);
-        for (Product p : listaEsercizio1) {
-            stampaProdotto(p);
-        }
+        System.out.println();
+        System.out.println("Esercizio1");
+        List<Product> listaEsercizio1 = listaProdotti.stream()
+                .filter(p -> p.getCategory() == "Books" && p.getPrice() > 100)
+                .toList();
+        listaEsercizio1.forEach(product -> System.out.println(product));
 
-        //esercizio 2
-        //getListaOrdini(listaOrdini);
+        //esercizio 2---------------------------------------------------------------------------------------------------
+        System.out.println();
+        System.out.println("Esercizio2");
+
+//      List<Order> l2 = listaOrdini.stream()
+//              .filter(o -> {
+//                  List<Product> lstProd = o.getProducts().stream()
+//                          .filter(p -> p.getCategory() == "Baby").toList();
+//                  return !lstProd.isEmpty();
+//              }).toList();
+//      l2.forEach(o -> System.out.println(o));
+
+        List<Order> l2 = listaOrdini.stream()
+                .filter(o -> o.getProducts()
+                        .stream()
+                        .anyMatch(p -> p.getCategory() == "Baby")
+                ).toList();
+        l2.forEach(o -> System.out.println(o));
+
 
         //esercizio 3
-        List<Product> listaEsercizio3 = getProdottiBoys(listaProdotti);
-        for (Product p : listaEsercizio3) {
-            stampaProdotto(p);
-        }
-
-
-
-
-    }
-
-    public static void stampaProdotto(Product p) {
-        System.out.println("----------------------------------------------");
-        System.out.println("Id prodotto: " + p.getId());
-        System.out.println("Descrizione: " + p.getName());
-        System.out.println("Categoria: " + p.getCategory());
-        System.out.println("Prezzo: " + p.getPrice());
-        System.out.println("----------------------------------------------");
         System.out.println();
-    }
+        System.out.println("Esercizio3");
+        List<Product> listaEsercizio3 = listaProdotti.stream().filter(p -> p.getCategory() == "Boys").
+                peek(p -> p.setPrice(p.getPrice() * 0.9)).toList();
+        listaEsercizio3.forEach(p -> System.out.println(p));
 
-    public static List<Product> getProdottiBooks(List<Product> lista) {
-        return lista.stream()
-                .filter(l -> (l.getCategory() == "Books" && l.getPrice() > 100))
+        //esercizio 4
+        System.out.println();
+        System.out.println("Esercizio4");
+        List<Product> listaEsercizio4 = listaOrdini.stream()
+                .filter(order -> order.getCustomer().getTier() == 2 &&
+                                 order.getOrderDate().isAfter(LocalDate.of(2021, 1, 31)) &&
+                                 order.getOrderDate().isBefore(LocalDate.of(2021, 4, 2)))
+                .flatMap(order -> order.getProducts().stream())
                 .collect(Collectors.toList());
-    }
-
-//    public static List<Order> getListaOrdini (List<Order> listaOrdini){
-//        return listaOrdini.stream()
-//                .flatMap(order -> order.getProducts()
-//                .stream()
-//                .filter(product -> product.getCategory()=="Baby")
-//                .collect(Collectors.toList());
-//    }
-
-
-    public static List<Product> getProdottiBoys (List<Product> lista){
-        return lista.stream()
-                .filter(p -> p.getCategory() == "Boys")
-                .map(p-> p.getPrice())
-                        .collect (Collectors.toList());
-
+        listaEsercizio4.forEach(System.out::println);
     }
 }

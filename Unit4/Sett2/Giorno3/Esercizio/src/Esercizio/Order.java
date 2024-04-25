@@ -67,4 +67,10 @@ public class Order{
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
+
+    @Override
+    public String toString() {
+        return "{id:" + id + "; status:" + status + "; order-date: " + orderDate +
+                "; delivery-date: " + deliveryDate + "; prodotti: "+products + "; customer: "+customer+"}";
+    }
 }

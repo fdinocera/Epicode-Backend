@@ -1,7 +1,7 @@
 package Esercizio;
 
 public class Customer {
-    private  Long id;
+    private Long id;
     private String name;
     private Integer tier;
 
@@ -33,5 +33,10 @@ public class Customer {
 
     public void setTier(Integer tier) {
         this.tier = tier;
+    }
+
+    @Override
+    public String toString() {
+        return "{id:" + id + "; name:" + name + "; tier: " + tier + "}";
     }
 }
