@@ -48,7 +48,7 @@ public class Pubblicazione {
         return "{ISBN: " + codiceISBN +
                 "; Titolo: " + titolo +
                 "; Anno pubblicazione: " + annoPubblicazione +
-                "; Numero pagine: " + numeroPagine+
-                "}";
+                "; Numero pagine: " + numeroPagine;
+
     }
 }
