@@ -1,8 +1,11 @@
+import org.apache.commons.io.FileUtils;
+
+import javax.swing.plaf.PanelUI;
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
 import java.time.LocalDate;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Esercizio {
@@ -69,6 +72,61 @@ public class Esercizio {
         System.out.println("Esercizio 5");
         Map<String, Double> m5 = listaProdotti.stream().collect(Collectors.groupingBy(Product::getCategory,
                 Collectors.summingDouble(p -> p.getPrice())));
-        m5.forEach((cat, prezzo )-> System.out.println(cat + " -> " + prezzo));
+        m5.forEach((cat, prezzo) -> System.out.println(cat + " -> " + prezzo));
+
+        //[EXTRA] Esercizio6
+        salvaProdottiSuDisco(listaProdotti);
+
+        //[EXTRA] Esercizio7
+        leggiProdottiDaDisco();
+
+    }
+
+    public static void salvaProdottiSuDisco(List<Product> listaProdotti) {
+
+        File file = new File("./../prodotti.txt");
+
+        String lista = listaProdotti.stream()
+                .map(p -> p.getId() + "@" +
+                        p.getName() + "@" +
+                        p.getCategory() + "@" +
+                        p.getPrice())
+                .collect(Collectors.joining("#"));
+
+        try {
+            FileUtils.writeStringToFile(file, lista, Charset.defaultCharset());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        System.out.println("Stampa prodotti salvati su disco");
+        listaProdotti.forEach(System.out::println);
+        System.out.println();
+    }
+
+    public static void leggiProdottiDaDisco() {
+
+        File file = new File("./../prodotti.txt");
+        List<Product> lista= new ArrayList<>();
+
+        try {
+            String data = FileUtils.readFileToString(file, Charset.defaultCharset());
+
+            lista = Arrays.stream(data.split("#"))
+                    .map(record -> {
+                        String[] campo = record.split("@");
+                        return new Product(Long.parseLong(campo[0]),
+                                campo[1],
+                                campo[2],
+                                Double.parseDouble(campo[3])
+                        );
+                    })
+                   .collect(Collectors.toList());
+
+
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        System.out.println("Stampa prodotti letti da disco");
+        lista.forEach(System.out::println);
     }
 }
