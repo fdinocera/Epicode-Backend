@@ -32,18 +32,19 @@ select extract (year from data_fattura) anno, count(*) numero_fatture, sum(impor
 from public.fatture 
 group by anno;
 
--- EXTRA
-select extract (year from data_fattura) anno
-from public.fatture where tipologia='A'
+-- 9 EXTRA
+select extract (year from data_fattura) anno, count(*) numero_fatture
+from public.fatture where tipologia='A' 
 group by anno
+having count(*)>2
 
---EXTRA Totale importo fatture divisi per regione di residenza clienti
+--10 EXTRA Totale importo fatture divisi per regione di residenza clienti
 select sum(importo), regione_residenza from public.clienti c inner join public.fatture f
 on c.numero_cliente=f.id_cliente
-group by c.regione_residenza
+group by c.regione_residenza;
 
 --EXTRA 
-select count(*) from public.clienti c
+select count(distinct numero_cliente) from public.clienti c
 inner join public.fatture f
 on c.numero_cliente=f.id_cliente
 where f.importo>50 and c.anno_di_nascita='1980';
