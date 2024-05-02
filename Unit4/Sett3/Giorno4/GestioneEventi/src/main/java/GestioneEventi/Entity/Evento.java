@@ -32,6 +32,11 @@ public class Evento {
     @OneToMany(mappedBy = "evento")
     private List<Partecipazione> lista_partecipazione = new ArrayList<>();
 
+
+    @OneToOne
+    @JoinColumn(name = "location_id")
+    private Location location;
+
     public Evento(int id, String titolo, LocalDate dataEvento, String descrizione, TIPO_EVENTO tipoEvento, int numeroMassimoPartecipanti) {
         this.id = id;
         this.titolo = titolo;

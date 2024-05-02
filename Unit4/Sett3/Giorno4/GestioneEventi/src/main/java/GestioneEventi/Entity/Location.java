@@ -12,9 +12,9 @@ public class Location {
     private String nome;
     private String citta;
 
-    @OneToOne
-    @JoinColumn(name = "evento_id")
-    private Evento evento;
+//    @OneToOne
+//    @JoinColumn(name = "evento_id")
+    //private Evento evento;
 
     public Location(int id, String nome, String citta) {
         this.id = id;

@@ -10,8 +10,8 @@ public class Partecipazione {
     @GeneratedValue
     private int id;
 
-    //    @OneToMany
-//    @JoinColumn(name = "id")
+    @ManyToOne
+    @JoinColumn(name = "persona_id")
     private Persona persona;
 
     @ManyToOne
@@ -20,6 +20,14 @@ public class Partecipazione {
 
     private STATO_PARTECIPAZIONE statoPartecipazione;
 
+    public STATO_PARTECIPAZIONE getStatoPartecipazione() {
+        return statoPartecipazione;
+    }
+
+    public void setStatoPartecipazione(STATO_PARTECIPAZIONE statoPartecipazione) {
+        this.statoPartecipazione = statoPartecipazione;
+    }
+
     public Partecipazione(int id, Persona persona, Evento evento) {
         this.id = id;
         this.persona = persona;
@@ -27,7 +35,6 @@ public class Partecipazione {
     }
 
     public Partecipazione() {
-
     }
 
     public int getId() {
