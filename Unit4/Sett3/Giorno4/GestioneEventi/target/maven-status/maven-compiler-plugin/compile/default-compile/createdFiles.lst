@@ -1,0 +1,12 @@
+GestioneEventi\dao\LocationDao.class
+GestioneEventi\Entity\Evento.class
+GestioneEventi\Main.class
+GestioneEventi\dao\PersonaDao.class
+GestioneEventi\Entity\SESSO.class
+GestioneEventi\Entity\Partecipazione.class
+GestioneEventi\Entity\Persona.class
+GestioneEventi\dao\PartecipazioneDao.class
+GestioneEventi\Entity\Location.class
+GestioneEventi\Entity\STATO_PARTECIPAZIONE.class
+GestioneEventi\Entity\TIPO_EVENTO.class
+GestioneEventi\dao\EventoDao.class
