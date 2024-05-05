@@ -1,0 +1,8 @@
+Catalogo\Entity\Prestito.class
+Catalogo\Enums\PERIODICITA.class
+Catalogo\Main.class
+Catalogo\Entity\Utente.class
+Catalogo\Dao\PubblicazioneDao.class
+Catalogo\Entity\Pubblicazione.class
+Catalogo\Entity\Rivista.class
+Catalogo\Entity\Libro.class
