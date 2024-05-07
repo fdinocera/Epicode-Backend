@@ -33,8 +33,8 @@ public class Prestito {
         this.elementoPrestato = elementoPrestato;
         this.dataInizioPrestito = dataInizioPrestito;
         this.dataRestituzioneEffettiva = dataRestituzioneEffettiva;
-
-        this.dataRestituzionePrevista = this.dataRestituzioneEffettiva.plusDays(30);
+        this.dataRestituzionePrevista = this.dataInizioPrestito.plusDays(30);
+        System.out.println("debug restituzione prevista" + this.dataRestituzionePrevista);
     }
 
     public Prestito() {

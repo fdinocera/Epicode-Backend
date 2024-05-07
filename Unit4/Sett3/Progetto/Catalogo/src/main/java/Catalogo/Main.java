@@ -58,6 +58,32 @@ public class Main {
 //        utenteDao.save(new Utente("Luigi", "Milano", LocalDate.of(1969, 7, 21), 357));
 //        utenteDao.save(new Utente("Andrea", "Torino", LocalDate.of(1977, 6, 18), 366));
 
+        //creazione prestiti
+        //restituito in tempo
+//        Prestito pr1 = new Prestito();
+//        pr1.setUtente(utenteDao.getById(42));
+//        pr1.setElementoPrestato(pubblicazioneDao.getById(34));
+//        pr1.setDataInizioPrestito(LocalDate.of(2024,01,01));
+//        pr1.setDataRestituzionePrevista(LocalDate.of(2024,2,1));
+//        pr1.setDataRestituzioneEffettiva(LocalDate.of(2024,1,18));
+//        prestitoDao.save(pr1);
+
+        //non restituito
+//        Prestito pr2 = new Prestito();
+//        pr2.setUtente(utenteDao.getById(42));
+//        pr2.setElementoPrestato(pubblicazioneDao.getById(35));
+//        pr2.setDataInizioPrestito(LocalDate.of(2023, 06, 01));
+//        pr2.setDataRestituzionePrevista(LocalDate.of(2023,07,1));
+//        prestitoDao.save(pr2);
+
+        //calcolo automatico scadenza, non restituito
+//        Prestito pr6 = new Prestito(
+//                utenteDao.getById(42),
+//                pubblicazioneDao.getById(41),
+//                LocalDate.of(2023, 01, 01),
+//                null);
+//        prestitoDao.save(pr6);
+
 
         // 2) Rimozione da catalogo con ISBN
 //        int recordEliminato = pubblicazioneDao.removeByIsbn("9788822736200");

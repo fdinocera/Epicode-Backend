@@ -3,6 +3,7 @@ package Catalogo.Entity;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -21,7 +22,7 @@ public class Utente {
 
     //////////////////////////////////////////////
     @OneToMany(mappedBy = "utente")
-    List<Prestito> prestiti;
+    Set<Prestito> prestiti;
     //////////////////////////////////////////////
 
     public Utente(String nome, String cognome, LocalDate dataDiNascita, int numeroTessera) {
@@ -30,7 +31,8 @@ public class Utente {
         this.dataDiNascita = dataDiNascita;
         this.numeroTessera = numeroTessera;
     }
-    public Utente(){
+
+    public Utente() {
 
     }
 
@@ -65,7 +67,8 @@ public class Utente {
     public void setNumeroTessera(int numeroTessera) {
         this.numeroTessera = numeroTessera;
     }
-    public int getId(){
+
+    public int getId() {
         return this.id;
     }
 
