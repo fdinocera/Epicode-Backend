@@ -22,10 +22,10 @@ public class Esercizio1Application {
 
         MenuApp menu = ctx.getBean(MenuApp.class);
 
-        List<VoceMenu> lista =menu.getVociMenu();
+        menu.stampaMenu();
 
-        System.out.println();
-        System.out.println("--- menu ---");
-        lista.forEach(System.out::println);
+
+
+
     }
 }

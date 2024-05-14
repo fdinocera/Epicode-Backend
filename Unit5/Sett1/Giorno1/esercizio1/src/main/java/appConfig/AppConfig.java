@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
@@ -118,19 +119,28 @@ public class AppConfig {
     @Bean
     public MenuApp getMenu(){
         MenuApp menu = new MenuApp();
-        menu.setVociMenu(List.of(
-                getMargherita(),
-                getHawaiana(),
-                getPizzaSalami(),
-                getCheese(),
-                getHam(),
-                getOnions(),
-                getPineapple(),
-                getSalami(),
-                getLimonata(),
-                getAcqua(),
-                getVino()
-        ));
+
+        ArrayList<Pizza> pizze =new ArrayList<>();
+        pizze.add(getMargherita());
+        pizze.add(getHawaiana());
+        pizze.add(getPizzaSalami());
+
+        ArrayList<Drink> drinks = new ArrayList<>();
+        drinks.add(getVino());
+        drinks.add(getAcqua());
+        drinks.add(getLimonata());
+
+        ArrayList<Topping> toppings= new ArrayList<>();
+        toppings.add(getCheese());
+        toppings.add((getPineapple()));
+        toppings.add((getHam()));
+        toppings.add(getOnions());
+        toppings.add(getSalami());
+
+        menu.setPizze(pizze);
+        menu.setDrinks(drinks);
+        menu.setToppings(toppings);
+
         return menu;
     }
 }
