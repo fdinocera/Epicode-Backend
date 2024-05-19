@@ -1,0 +1,13 @@
+it\epicode\progetto\repositories\PrenotazioneRepository.class
+it\epicode\progetto\repositories\UtenteRepository.class
+it\epicode\progetto\ENUMS\TipoPostazione.class
+it\epicode\progetto\repositories\PostazioneRepository.class
+it\epicode\progetto\entities\Utente.class
+it\epicode\progetto\ProgettoApplication.class
+it\epicode\progetto\entities\Prenotazione.class
+it\epicode\progetto\entities\Edificio.class
+it\epicode\progetto\Runner.class
+it\epicode\progetto\service\PrenotazioneService.class
+it\epicode\progetto\repositories\EdificioRepository.class
+it\epicode\progetto\appConfig\appConfig.class
+it\epicode\progetto\entities\Postazione.class
