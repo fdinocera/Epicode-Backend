@@ -7,13 +7,13 @@ import java.time.LocalDate;
 @Data
 public class Autore {
 
-    int id;
-    static int counter;
-    String nome;
-    String cognome;
-    String email;
-    LocalDate dataDiNascita;
-    String avatar;
+    private int id;
+    private static int counter;
+    private String nome;
+    private String cognome;
+    private String email;
+    private LocalDate dataDiNascita;
+    private String avatar;
 
 
     public Autore(String nome, String cognome, String email, LocalDate dataDiNascita, String avatar) {
@@ -21,7 +21,6 @@ public class Autore {
         this.cognome = cognome;
         this.email = email;
         this.dataDiNascita = dataDiNascita;
-        //this.avatar = "https://ui-avatars.com/api/?name=" + nome + "+" + cognome;
         counter++;
         id = counter;
     }

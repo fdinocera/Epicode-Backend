@@ -22,16 +22,16 @@ public class AutoreService {
     public String creaAutore(Autore autore) {
         autore.setAvatar("https://ui-avatars.com/api/?name=" + autore.getNome() + "+" + autore.getCognome());
         autori.add(autore);
-        return "autore creato con successo";
+        return "autore creato con successo id=" + autore.getId();
     }
 
     public Autore getAutore(int id) {
 
         Optional<Autore> autore = autori.stream().filter(aut -> aut.getId() == id).findFirst();
 
-        if (autore.isPresent()){
+        if (autore.isPresent()) {
             return autore.get();
-        }else {
+        } else {
             throw new RuntimeException();
         }
     }
@@ -54,12 +54,12 @@ public class AutoreService {
         }
     }
 
-    public String deleteAutore(int id) throws AutoreNonTrovatoException{
+    public String deleteAutore(int id) throws AutoreNonTrovatoException {
         Optional<Autore> autoreOpt = Optional.ofNullable(getAutore(id));
-        if (autoreOpt.isPresent()){
+        if (autoreOpt.isPresent()) {
             autori.remove(autoreOpt.get());
             return "Autore cancellato";
-        }else {
+        } else {
             throw new AutoreNonTrovatoException("Autore non trovato");
         }
     }
