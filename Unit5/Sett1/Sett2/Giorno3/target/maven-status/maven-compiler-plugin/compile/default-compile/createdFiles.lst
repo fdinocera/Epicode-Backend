@@ -1,0 +1,9 @@
+it\epicode\eserciziomartedi\exception\PostNonTrovatoException.class
+it\epicode\eserciziomartedi\controller\AutoreController.class
+it\epicode\eserciziomartedi\model\Autore.class
+it\epicode\eserciziomartedi\EsercizioMartediApplication.class
+it\epicode\eserciziomartedi\service\AutoreService.class
+it\epicode\eserciziomartedi\model\Post.class
+it\epicode\eserciziomartedi\controller\PostController.class
+it\epicode\eserciziomartedi\service\PostService.class
+it\epicode\eserciziomartedi\exception\AutoreNonTrovatoException.class
