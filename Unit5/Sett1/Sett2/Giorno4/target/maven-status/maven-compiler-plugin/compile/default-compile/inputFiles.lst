@@ -1,0 +1,16 @@
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\controller\AutoreController.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\controller\PostController.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\DTO\AutoreDto.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\DTO\PostDto.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\EsercizioMartediApplication.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\exception\AutoreNonTrovatoException.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\exception\BadRequesException.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\exception\CentralizedExceptionHandling.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\exception\PostNonTrovatoException.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\model\Autore.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\model\Error.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\model\Post.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\repository\AutoreRepository.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\repository\PostRepository.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\service\AutoreService.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Giorno4\src\main\java\it\epicode\eserciziomartedi\service\PostService.java
