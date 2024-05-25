@@ -1,0 +1,17 @@
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\configuration\AppConfig.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\controller\AutoreController.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\controller\PostController.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\DTO\AutoreDto.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\DTO\PostDto.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\exception\AutoreNonTrovatoException.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\exception\BadRequestException.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\exception\CentralizedExceptionHandling.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\exception\PostNonTrovatoException.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\model\Autore.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\model\Error.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\model\Post.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\ProgettoApplication.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\repository\AutoreRepository.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\repository\PostRepository.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\service\AutoreService.java
+C:\Users\ferdinando\Desktop\Epicode-Backend\Unit5\Sett2\Progetto\src\main\java\it\epicode\progetto\service\PostService.java

@@ -1,0 +1,17 @@
+it\epicode\progetto\service\AutoreService.class
+it\epicode\progetto\model\Autore.class
+it\epicode\progetto\repository\PostRepository.class
+it\epicode\progetto\exception\CentralizedExceptionHandling.class
+it\epicode\progetto\controller\AutoreController.class
+it\epicode\progetto\DTO\AutoreDto.class
+it\epicode\progetto\repository\AutoreRepository.class
+it\epicode\progetto\ProgettoApplication.class
+it\epicode\progetto\service\PostService.class
+it\epicode\progetto\model\Error.class
+it\epicode\progetto\DTO\PostDto.class
+it\epicode\progetto\exception\BadRequestException.class
+it\epicode\progetto\exception\PostNonTrovatoException.class
+it\epicode\progetto\controller\PostController.class
+it\epicode\progetto\configuration\AppConfig.class
+it\epicode\progetto\exception\AutoreNonTrovatoException.class
+it\epicode\progetto\model\Post.class
