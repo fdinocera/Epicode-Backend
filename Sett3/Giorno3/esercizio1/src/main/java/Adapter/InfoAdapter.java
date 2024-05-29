@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 public class InfoAdapter implements DataSource {
 
 
-    Info info = new Info();
+    private Info info = new Info();
 
     public Info getInfo() {
         return info;
@@ -29,7 +29,7 @@ public class InfoAdapter implements DataSource {
         return info.getCognome();
     }
 
-    public Date getDataDiNascita(){
+    public Date getDataDiNascita() {
         return info.getDataDiNascita();
     }
 
@@ -44,12 +44,15 @@ public class InfoAdapter implements DataSource {
 
         Date dataDiNascita = info.getDataDiNascita();
         Date oggi = new Date();
+
         long differenzaMillisecondi = oggi.getTime() - dataDiNascita.getTime();
 
+        long differenzaAnni = differenzaMillisecondi / (1000 * 60 * 60 * 24 * 365L);
 
-        long differenzaAnni = TimeUnit.MILLISECONDS.toDays(differenzaMillisecondi);
-
+        //long differenzaAnni = TimeUnit.MILLISECONDS.toDays(differenzaMillisecondi);
         return (int) differenzaAnni;
+
+
     }
 
     @Override

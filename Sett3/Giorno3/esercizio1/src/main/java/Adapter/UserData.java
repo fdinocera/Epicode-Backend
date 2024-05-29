@@ -12,5 +12,11 @@ public class UserData {
         eta = ds.getEta();
     }
 
-
+    @Override
+    public String toString() {
+        return "UserData{" +
+                "nomeCompleto='" + nomeCompleto + '\'' +
+                ", eta=" + eta +
+                '}';
+    }
 }

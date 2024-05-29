@@ -3,6 +3,7 @@ package Adapter;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,17 +12,21 @@ public class Main {
         Info persona1 = new Info();
         persona1.setCognome("Rossi");
         persona1.setNome("Mario");
-        persona1.setDataDiNascita(new Date(1980,6,2));
+        //persona1.setDataDiNascita(new Date(1980,6,2));
+        persona1.setDataDiNascita(new GregorianCalendar(2000,6,2).getTime());
 
         InfoAdapter infoAdapter = new InfoAdapter(persona1);
 
 
 
 
-        System.out.println(infoAdapter.getEta());
-        System.out.println(infoAdapter.getNomeCompleto());
+        UserData userData= new UserData();
+        userData.getData(infoAdapter);
 
-        System.out.println(infoAdapter.toString());
+        System.out.println(userData);
+
+
+
 
     }
 }
